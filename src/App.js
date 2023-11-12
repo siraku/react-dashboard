@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Sidebar } from "./conmponents";
+import { Ecommerce, Orders } from "./pages";
 import "./App.css";
 
 const App = () => {
@@ -40,11 +41,11 @@ const App = () => {
 
         <div>
           <Routes>
-            <Route path="/" element="ECormmerce" />
-            <Route path="/ecommerce" element="ECormmerce" />
+            <Route path="/" element={<Ecommerce />} />
+            <Route path="/ecommerce" element={<Ecommerce />} />
 
             {/* pages */}
-            <Route path="/orders" element="Orders" />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/employees" element="Employees" />
             <Route path="/customers" element="Customers" />
 
