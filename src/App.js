@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { Sidebar } from "./conmponents";
 import "./App.css";
 
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -22,7 +23,7 @@ const App = () => {
         </div>
         {activeMenu ? (
           <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
-            Sidebar
+            <Sidebar />
           </div>
         ) : (
           <div className="w-0 dark:bg-secondary-dark-bg"> Sidebar W-0</div>
