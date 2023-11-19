@@ -1,7 +1,12 @@
 import React from "react";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
+      {" "}
+      Navbar
+    </div>
+  );
 };
 
 export default Navbar;

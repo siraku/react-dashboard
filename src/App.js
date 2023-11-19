@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Sidebar } from "./conmponents";
-import { Ecommerce, Orders } from "./pages";
+import { Navbar, Sidebar } from "./conmponents";
+import { Calendar, Ecommerce, Employees, Orders } from "./pages";
 import "./App.css";
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
           }`}
         >
           <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-            Navbar
+            <Navbar />
           </div>
         </div>
 
@@ -46,13 +46,13 @@ const App = () => {
 
             {/* pages */}
             <Route path="/orders" element={<Orders />} />
-            <Route path="/employees" element="Employees" />
+            <Route path="/employees" element={<Employees />} />
             <Route path="/customers" element="Customers" />
 
             {/* Apps */}
             <Route path="/kanban" element="Kanban" />
             <Route path="/editor" element="Editor" />
-            <Route path="/calendar" element="Calendar" />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="/color-picker" element="ColorPicker" />
 
             {/* charts */}
